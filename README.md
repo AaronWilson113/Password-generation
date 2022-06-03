@@ -1,1 +1,1 @@
-# Rock-paper-scissors
+# Password-generator
