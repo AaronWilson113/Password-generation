@@ -17,15 +17,20 @@ function writePassword() {
   if (enter <8 || enter > 128) {
 
     enter = parseInt(prompt("You must choose between 8 and 128"));
+ 
   } else {
-    confirmNumber = confirm("Will this contain numbers?");
-        confirmCharacter = confirm("Will this contain special characters?");
-        confirmUppercase = confirm("Will this contain Uppercase letters?");
-        confirmLowercase = confirm("Will this contain Lowercase letters?");
+        logNumber = confirm("Will this contain numbers?");
+        logSymbol = confirm("Will this contain special characters?");
+        logUppercase = confirm("Will this contain Uppercase letters?");
+        logLowercase = confirm("Will this contain Lowercase letters?");
     };
   
+     if (logNumber && logSymbol && logUppercase && logLowercase) {
 
-  
+      choices = symbols.concat(numbers, letters, UpperC);
+  }  
+
+
 
     
   
