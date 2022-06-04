@@ -99,6 +99,12 @@ if (Lowercase === true) {
 
 }
 
+for (let i = 0 ; i < (parseInt(passwordLength) - minimumCount); i++) {
+  var randomNumberPicked = Math.floor(Math.random() * 4);
+
+  randomPasswordGenerated += randomNumberPicked
+
+}
 
 };
 
