@@ -4,6 +4,7 @@ var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var symbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
+
 var enter;
 var logNumber;
 var logLowercase;
@@ -11,6 +12,14 @@ var logUppercase;
 var logSymbol;
 
 var choices
+
+
+var toUpper = function (x) {
+  return x.toUpperCase();
+};
+
+Upperletters = letters.map(toUpper);
+
 
 //Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -132,18 +141,8 @@ function writePassword() {
 
   passwordText.value = password;
 
- 
-}
+};
 
-for (var i=0; i <enter; i++) {
-  var pick = choices[Math.floor(Math.random() * choices.length)];
-  password.push(pickChoices);
 
-}
-
-function UserInput(ps) {
-  document.getElementById("password").textContent = ps;
-
-}
 
 
