@@ -146,6 +146,14 @@ else if (confirmUpper) {
 
 };
 
+var password = [];
+
+for (var i = 0; i < enter; i++) {
+  var pickchoices = choices[Math.floor(Math.random() * choices.length)];
+  password.push(pickChoices);
+  
+}
+
 }
  
 
