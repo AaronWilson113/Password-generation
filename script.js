@@ -41,9 +41,9 @@ function generatePassword() {
 
   var passwordLength = prompt("what length would you like your password to be bb girl?")
 
-  var Number = confirm("Will this contain numbers?");
+  var Numbers = confirm("Will this contain numbers?");
 
-  var Symbol = confirm("Will this contain special characters?");
+  var Symbols = confirm("Will this contain special characters?");
 
   var Uppercase = confirm("Will this contain Uppercase letters?");
 
@@ -54,7 +54,7 @@ function generatePassword() {
   var minimumNumbers = "";
   var minimumLowerCases = "";
   var minimumUpperCases = "";
-  var minimumSpecialCharacters = "";
+  var minimumSymbols = "";
 
   var functionArray = {
     getNumbers: function() {
@@ -69,11 +69,35 @@ function generatePassword() {
       return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
     },
 
-    getSpecialCharacters: function() {
+    getSymbols: function() {
       return specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
     }
 
 };
+
+if (Numbers === true) {
+  minimumNumbers = functionArray.getLowerCases();
+  minimumCount++;
+
+}
+
+if (Symbols === true) {
+  minimumSymbols = functionArray.getSymbols();
+  minimumCount++;
+
+}
+
+if (Uppercase === true) {
+  minimumUpperCases = functionArray.getUpperCases();
+  minimumCount++;
+
+}
+
+if (Lowercase === true) {
+  minimumLowerCases = functionArray.getLowerCases();
+  minimumCount++;
+
+}
 
 
 };
