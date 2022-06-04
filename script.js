@@ -105,7 +105,7 @@ for (let i = 0 ; i < (parseInt(passwordLength) - minimumCount); i++) {
   randomPasswordGenerated += minimumNumbers;
   randomPasswordGenerated += minimumLowerCases;
   randomPasswordGenerated += minimumUpperCases;
-  randomPasswordGenerated += minimumSpecialCharacters;
+  randomPasswordGenerated += minimumSymbols;
 
   return randomPasswordGenerated;
 
