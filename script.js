@@ -14,12 +14,6 @@ var logSymbol;
 var choices
 
 
-var toUpper = function (x) {
-  return x.toUpperCase();
-};
-
-Upperletters = letters.map(toUpper);
-
 
 //Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -106,7 +100,12 @@ for (let i = 0 ; i < (parseInt(passwordLength) - minimumCount); i++) {
 
 }
 
-return randomPasswordGenerated;
+  randomPasswordGenerated += minimumNumbers;
+  randomPasswordGenerated += minimumLowerCases;
+  randomPasswordGenerated += minimumUpperCases;
+  randomPasswordGenerated += minimumSpecialCharacters;
+
+  return randomPasswordGenerated;
 
 };
 
