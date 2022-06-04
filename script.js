@@ -22,7 +22,18 @@ generateBtn.addEventListener("click", writePassword);
 
 
 // Write password to the #password input
-function writePassword() 
+function writePassword() {
+  
+  enter = parseInt(prompt("Choose a number, any number, between 8 and 128, go on dont be shy"));
+
+  if (!enter) {
+    alert("This needs a value silly");
+  } else if (enter <8 || enter > 128) {
+    enter = parseInt(prompt("Come on now you gotta pick a number between 8 and 128 not just any number"));
+  }
+
+
+}
  
 
 
