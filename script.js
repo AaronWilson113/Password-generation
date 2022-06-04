@@ -9,7 +9,7 @@ letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
 
 var enter; 
 var confirmNum;
-var confirmChar;
+var confirmSym;
 var confirmUpper;
 var confirmLower;
 
@@ -44,37 +44,37 @@ function writePassword() {
 
   else {
     confirmNum = confirm("Would you like to add some numbers to your password?")
-    confirmChar = confirm("How about some wacky symbols?")
+    confirmSym = confirm("How about some wacky symbols?")
     confirmUpper = confirm("Ok, ok, what about some UPPER CASE LETTERS?")
     confirmLower = confirm("One last choice I promise, are we ok with boring old lowercase letters?")
   };
 
   
-  if (!confirmChar && !confirmNum && !confirmUpper && !confirmLower) {
+  if (!confirmSym && !confirmNum && !confirmUpper && !confirmLower) {
     
     choices = alert("You must choose a criteria!");
   
   }
 
-  else if (confirmChar && confirmNum && confirmUpper && confirmLower) {
+  else if (confirmSym && confirmNum && confirmUpper && confirmLower) {
 
     choices = symbol.concat(number, letters, Upperc);
   
   }
 
-  else if (confirmChar && confirmNum && confirmUpper) {
+  else if (confirmSym && confirmNum && confirmUpper) {
     
     choices = symbol.concat(number, Upperc);
   
   }
   
-  else if (confirmChar && confirmNum && confirmLower) {
+  else if (confirmSym && confirmNum && confirmLower) {
     
     choices = symbol.concat(number, letters);
   
   }
   
-  else if (confirmChar && confirmLower && confirmUpper) {
+  else if (confirmSym && confirmLower && confirmUpper) {
     
     choices = symbol.concat(letters, Upperc);
   
@@ -86,19 +86,19 @@ function writePassword() {
   
   }
  
-  else if (confirmChar && confirmNum) {
+  else if (confirmSym && confirmNum) {
     
     choices = symbol.concat(number);
 
   }
 
-  else if (confirmChar && confirmLower) {
+  else if (confirmSym && confirmLower) {
     
     choices = symbol.concat(letters);
 
   }
 
-  else if (confirmChar && confirmUpper) {
+  else if (confirmSym && confirmUpper) {
     
     choices = symbol.concat(Upperc);
   
@@ -122,7 +122,7 @@ function writePassword() {
 
   }
 
-  else if (confirmChar) {
+  else if (confirmSym) {
     
     choices = symbol;
 
@@ -149,24 +149,24 @@ else if (confirmUpper) {
 var password = [];
 
 for (var i = 0; i < enter; i++) {
-  var pickchoices = choices[Math.floor(Math.random() * choices.length)];
-  password.push(pickChoices);
+    var pickChoices = choices[Math.floor(Math.random() * choices.length)];
+    password.push(pickChoices);
+}
+
+var ps = password.join("");
+
+  UserInput(ps);
+  return ps;
 
 }
 
 function UserInput(ps) {
-  
+
   document.getElementById("password").textContent = ps;
 
 }
 
-var copy = document.querySelector("#copy");
-copy.addEventListener("click", function () {
-    copyPassword();
-});
 
-}
- 
 
 
 
