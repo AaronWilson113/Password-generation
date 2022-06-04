@@ -15,6 +15,10 @@ var choices
 //Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+
 // Write password to the #password input
 function writePassword() {
   
@@ -137,6 +141,9 @@ for (var i=0; i <enter; i++) {
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+function UserInput(ps) {
+  document.getElementById("password").textContent = ps;
+
+}
+
 
