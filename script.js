@@ -10,6 +10,8 @@ var logLowercase;
 var logUppercase;
 var logSymbol;
 
+var choices
+
 //Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -55,86 +57,84 @@ function writePassword() {
 
      else if (logSymbol && logLowercase && logUppercase) {
 
-      choice = symbols.concat(letters , Upperletters)
+      choices = symbols.concat(letters , Upperletters)
      
      }
 
      else if (logSymbol && logLowercase) {
 
-      choice = symbols.concat(letters)
+      choices = symbols.concat(letters)
 
      }
 
      else if (logSymbol && logUppercase) {
 
-      choice = symbols.concat(Upperletters)
+      choices = symbols.concat(Upperletters)
 
      }
 
      else if (logSymbol && logNumber) {
 
-      choice = symbols.concat(numbers)
+      choices = symbols.concat(numbers)
 
      }
 
      else if (logLowercase && logUppercase) {
 
-      choice = letters.concat(Upperletters)
+      choices = letters.concat(Upperletters)
 
      }
 
      else if (logLowercase && logNumber) {
 
-      choice = letters.concat(numbers)
+      choices = letters.concat(numbers)
      
      }
 
      else if (logUppercase && logNumber) {
 
-      choice = Upperletters.concat(numbers)
+      choices = Upperletters.concat(numbers)
      
      }
 
      else if (logSymbol) {
 
-      choice = symbols;
+      choices = symbols;
 
      }
 
      else if (logNumber) {
 
-      choice = numbers;
+      choices = numbers;
 
      }
 
      else if (logUppercase) {
 
-      choice = Upperletters
+      choices = Upperletters
 
      }
 
      else if (logLowercase) {
 
-      choice = letters;
+      choices = letters;
 
      }
     
 
 
-  
-
-
-
-    
-  
-  
-  
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
  
+}
+
+for (var i=0; i <enter; i++) {
+  var pick = choices[Math.floor(Math.random() * choices.length)];
+  password.push(pickChoices);
+
 }
 
 // Add event listener to generate button
