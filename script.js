@@ -1,17 +1,11 @@
 // Assignment Code
 
-var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; //AKA lowercase. need to add uppercase
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-var symbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
-
-
-
-
 //Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
 
 
 // Write password to the #password input
@@ -37,10 +31,10 @@ function generatePassword() {
   
   var minimumCount = 0;
   
-  var minimumNumbers = "";
-  var minimumLowerCases = "";
+  var minimumNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  var minimumLowerCases = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; 
   var minimumUpperCases = "";
-  var minimumSymbols = "";
+  var minimumSymbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
   var functionArray = {
     getNumbers: function() {
@@ -56,7 +50,7 @@ function generatePassword() {
     },
 
     getSymbols: function() {
-      return symbols[Math.floor(Math.random() * symbols.length)]
+      return Symbols[Math.floor(Math.random() * Symbols.length)]
     }
 
 };
