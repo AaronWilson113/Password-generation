@@ -5,14 +5,6 @@ var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var symbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
 
-var enter;
-var logNumber;
-var logLowercase;
-var logUppercase;
-var logSymbol;
-
-var choices
-
 
 
 //Get references to the #generate element
