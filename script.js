@@ -70,7 +70,7 @@ function generatePassword() {
     },
 
     getSymbols: function() {
-      return specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
+      return symbols[Math.floor(Math.random() * symbols.length)]
     }
 
 };
@@ -105,6 +105,8 @@ for (let i = 0 ; i < (parseInt(passwordLength) - minimumCount); i++) {
   randomPasswordGenerated += randomNumberPicked
 
 }
+
+return randomPasswordGenerated;
 
 };
 
