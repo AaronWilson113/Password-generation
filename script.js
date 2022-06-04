@@ -29,112 +29,24 @@ generateBtn.addEventListener("click", writePassword);
 
 
 // Write password to the #password input
-function writePassword() {
+function generatePassword() {
+
+  var passwordLength = prompt("what length would you like your password to be bb girl?")
+
+  var Number = confirm("Will this contain numbers?");
+
+  var Symbol = confirm("Will this contain special characters?");
+
+  var Uppercase = confirm("Will this contain Uppercase letters?");
+
+  var Lowercase = confirm("Will this contain Lowercase letters?");
   
-  enter = parseInt(prompt("what length would you like your password to be bb girl?"));
-
-  if (enter <8 || enter > 128) {
-
-    enter = parseInt(prompt("You must choose between 8 and 128"));
- 
-  } else {
-        logNumber = confirm("Will this contain numbers?");
-        logSymbol = confirm("Will this contain special characters?");
-        logUppercase = confirm("Will this contain Uppercase letters?");
-        logLowercase = confirm("Will this contain Lowercase letters?");
-    };
+  var minimumCount = 0;
   
-     if (logNumber && logSymbol && logUppercase && logLowercase) {
-
-      choices = symbols.concat(numbers, letters, Upperletters);
-     
-     }  
-
-     else if (logNumber && logSymbol && logUppercase) {
-
-      choices = numbers.concat(symbols , Upperletters)
-     
-     }
-
-     else if (logNumber && logSymbol && logLowercase) {
-
-      choices = numbers.concat(symbols , Upperletters)
-     
-     }
-
-     else if (logNumber && logLowercase && logUppercase) {
-
-      choices = numbers.concat(letters , Upperletters)
-     
-     }
-
-     else if (logSymbol && logLowercase && logUppercase) {
-
-      choices = symbols.concat(letters , Upperletters)
-     
-     }
-
-     else if (logSymbol && logLowercase) {
-
-      choices = symbols.concat(letters)
-
-     }
-
-     else if (logSymbol && logUppercase) {
-
-      choices = symbols.concat(Upperletters)
-
-     }
-
-     else if (logSymbol && logNumber) {
-
-      choices = symbols.concat(numbers)
-
-     }
-
-     else if (logLowercase && logUppercase) {
-
-      choices = letters.concat(Upperletters)
-
-     }
-
-     else if (logLowercase && logNumber) {
-
-      choices = letters.concat(numbers)
-     
-     }
-
-     else if (logUppercase && logNumber) {
-
-      choices = Upperletters.concat(numbers)
-     
-     }
-
-     else if (logSymbol) {
-
-      choices = symbols;
-
-     }
-
-     else if (logNumber) {
-
-      choices = numbers;
-
-     }
-
-     else if (logUppercase) {
-
-      choices = Upperletters
-
-     }
-
-     else if (logLowercase) {
-
-      choices = letters;
-
-     }
-    
-
+  var minimumNumbers = "";
+  var minimumLowerCases = "";
+  var minimumUpperCases = "";
+  var minimumSpecialCharacters = "";
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -142,7 +54,6 @@ function writePassword() {
   passwordText.value = password;
 
 };
-
 
 
 
