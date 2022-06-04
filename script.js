@@ -1,6 +1,6 @@
 // Assignment Code
 
-character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
+symbol = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -8,10 +8,19 @@ letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
 
 
 var enter; 
-var confirmNum
-var confirmChar
-var confirmUpper
-var confirmLower
+var confirmNum;
+var confirmChar;
+var confirmUpper;
+var confirmLower;
+
+var choices;
+
+var toUpper = function (x) {
+  return x.toUpperCase();
+};
+
+Upperc = letters.map(toUpper);
+
 
 
 //Get references to the #generate element
@@ -49,73 +58,73 @@ function writePassword() {
 
   else if (confirmChar && confirmNum && confirmUpper && confirmLower) {
 
-    choices = character.concat(number, placeholder, placeholder2);
+    choices = symbol.concat(number, letters, Upperc);
   
   }
 
   else if (confirmChar && confirmNum && confirmUpper) {
     
-    choices = character.concat(number, placeholder2);
+    choices = symbol.concat(number, Upperc);
   
   }
   
   else if (confirmChar && confirmNum && confirmLower) {
     
-    choices = character.concat(number, placeholder);
+    choices = symbol.concat(number, letters);
   
   }
   
   else if (confirmChar && confirmLower && confirmUpper) {
     
-    choices = character.concat(placeholder, placeholder2);
+    choices = symbol.concat(letters, Upperc);
   
   }
   
   else if (confirmNum && confirmLower && confirmUpper) {
     
-    choices = number.concat(placeholder, placeholder2);
+    choices = number.concat(letters, Upperc);
   
   }
  
   else if (confirmChar && confirmNum) {
     
-    choices = character.concat(number);
+    choices = symbol.concat(number);
 
   }
 
   else if (confirmChar && confirmLower) {
     
-    choices = character.concat(placeholder);
+    choices = symbol.concat(letters);
 
   }
 
   else if (confirmChar && confirmUpper) {
     
-    choices = character.concat(placeholder2);
+    choices = symbol.concat(Upperc);
   
   }
 
   else if (confirmLower && confirmNum) {
     
-    choices = placeholder.concat(number);
+    choices = letters.concat(number);
   
   }
   
   else if (confirmLower && confirmUpper) {
     
-    choices = placeholder.concat(placeholder2);
+    choices = letters.concat(Upperc);
 
   }
 
   else if (confirmNum && confirmUpper) {
     
-    choices = number.concat(placeholder2);
+    choices = number.concat(Upperc);
 
   }
 
   else if (confirmChar) {
     
-    choices = character;
+    choices = symbol;
 
   }
 
@@ -127,13 +136,13 @@ function writePassword() {
 
   else if (confirmLower) {
     
-    choices = placeholder;
+    choices = letters;
 
   }
 
 else if (confirmUpper) {
     
-  choices = space.concat(placeholder2);
+  choices = space.concat(Upperc);
 
 };
 
