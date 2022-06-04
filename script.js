@@ -29,6 +29,14 @@ generateBtn.addEventListener("click", writePassword);
 
 
 // Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
 function generatePassword() {
 
   var passwordLength = prompt("what length would you like your password to be bb girl?")
@@ -67,12 +75,10 @@ function generatePassword() {
 
 };
 
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
 
 };
+
+
 
 
 
