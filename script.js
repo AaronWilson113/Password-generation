@@ -1,6 +1,6 @@
 // Assignment Code
 
-var letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; //AKA lowercase. need to add uppercase
 var numbers = "0123456789";
 var symbols = "!@#$%^&*_-+=";
 
@@ -27,8 +27,34 @@ function writePassword() {
   
      if (logNumber && logSymbol && logUppercase && logLowercase) {
 
-      choices = symbols.concat(numbers, letters, UpperC);
-  }  
+      choices = symbols.concat(numbers, letters, Upperletters);
+     
+     }  
+
+     else if (logNumber && logSymbol && logUppercase) {
+
+      choices = numbers.concat(symbols , Upperletters)
+     
+     }
+
+     else if (logNumber && logSymbol && logLowercase) {
+
+      choices = numbers.concat(symbols , Upperletters)
+     
+     }
+
+     else if (logNumber && logLowercase && logUppercase) {
+
+      choices = numbers.concat(letters , Upperletters)
+     
+     }
+
+     else if (logSymbol && logLowercase && logUppercase)
+
+      choice = symbols.concat(letters , Upperletters)
+
+
+
 
 
 
