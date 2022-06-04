@@ -49,9 +49,72 @@ function writePassword() {
      
      }
 
-     else if (logSymbol && logLowercase && logUppercase)
+     else if (logSymbol && logLowercase && logUppercase) {
 
       choice = symbols.concat(letters , Upperletters)
+     
+     }
+
+     else if (logSymbol && logLowercase) {
+
+      choice = symbols.concat(letters)
+
+     }
+
+     else if (logSymbol && logUppercase) {
+
+      choice = symbols.concat(Upperletters)
+
+     }
+
+     else if (logSymbol && logNumber) {
+
+      choice = symbols.concat(numbers)
+
+     }
+
+     else if (logLowercase && logUppercase) {
+
+      choice = letters.concat(Upperletters)
+
+     }
+
+     else if (logLowercase && logNumber) {
+
+      choice = letters.concat(numbers)
+     
+     }
+
+     else if (logUppercase && logNumber) {
+
+      choice = Upperletters.concat(numbers)
+     
+     }
+
+     else if (logSymbol) {
+
+      choice = symbols;
+
+     }
+
+     else if (logNumber) {
+
+      choice = numbers;
+
+     }
+
+     else if (logUppercase) {
+
+      choice = Upperletters
+
+     }
+
+     else if (logLowercase) {
+
+      choice = letters;
+      
+     }
+    
 
 
 
