@@ -34,7 +34,7 @@ generateBtn.addEventListener("click", writePassword);
 // Write password to the #password input
 function writePassword() {
   
-  enter = parseInt(prompt("Choose a number, any number, between 8 and 128, go on dont be shy"));
+  enter = parseInt(prompt("Choose a number, any number, between 8 and 128"));
 
   if (!enter) {
     alert("This needs a value silly");
